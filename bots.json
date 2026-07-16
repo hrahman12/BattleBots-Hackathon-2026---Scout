@@ -1,0 +1,358 @@
+{
+  "_schema_note": "One record per bot. null = unknown, run scraper.py to fill. Fields marked _prior are hand-set estimates to be replaced by scraped/trained values.",
+  "bots": [
+    {
+      "name": "Tombstone",
+      "team": "Hardcore Robotics (Ray Billings)",
+      "weight_class": "heavyweight",
+      "weapon_type": "horizontal_spinner",
+      "weapon_detail": "Interchangeable horizontal bar, ~65-84 lb blades, 2-wheel invertible drive",
+      "titles": [
+        "BattleBots World Championship II (2016)"
+      ],
+      "career_ko_wins": 29,
+      "ko_win_rate": 0.88,
+      "self_failure_incidents": [
+        {
+          "event": "World Championship I final vs Bite Force",
+          "failure": "Weapon died from overheated batteries; lost judges' decision"
+        },
+        {
+          "event": "2018 Round of 16 vs Bombshell",
+          "failure": "Stuck on its own weapon chain"
+        },
+        {
+          "event": "World Championship V final vs Bite Force",
+          "failure": "Weapon stopped (bad battery); reduced to pushing match in second half"
+        }
+      ],
+      "defect_summary": "Chronic recoil-induced self-damage. Weapon/battery systems fail late in fights. Documented tendency to disable itself with the recoil of its own weapon.",
+      "exploit": "Survive the opening minute. Absorb or deflect early hits; win probability shifts sharply once the fight goes long and his weapon or batteries fail.",
+      "failure_trigger": "late_fight_hardware",
+      "sources": [
+        "https://battlebots.fandom.com/wiki/Tombstone",
+        "https://en.namu.wiki/w/Tombstone"
+      ],
+      "data_completeness": "high"
+    },
+    {
+      "name": "End Game",
+      "team": "OYES Robotics (New Zealand)",
+      "weight_class": "heavyweight",
+      "weapon_type": "vertical_spinner",
+      "weapon_detail": "Single-toothed vertical spinner, 40-55 lb disk options, piano-key wedgelets (2022)",
+      "titles": [
+        "BattleBots World Championship V (2020)"
+      ],
+      "career_ko_wins": null,
+      "ko_win_rate": null,
+      "self_failure_incidents": [
+        {
+          "event": "vs Bite Force (2019)",
+          "failure": "Flipped; could not self-right because disk was not up to speed; counted out"
+        },
+        {
+          "event": "vs Son of Whyachi",
+          "failure": "Radio receiver destroyed; counted out"
+        },
+        {
+          "event": "vs Ribbot",
+          "failure": "Lost drive on one side; struggled to show movement; counted out"
+        },
+        {
+          "event": "vs Minotaur",
+          "failure": "Stopped moving under pulverizer pressure; counted out"
+        },
+        {
+          "event": "vs DeathRoll",
+          "failure": "Rendered immobile; counted out"
+        }
+      ],
+      "defect_summary": "Loses by count-out, not destruction. Immobilization-prone: one-sided drive failures, exposed electronics (destroyed radio receiver), and early builds could not self-right unless the disk was spinning. A secondary self-righting mechanism was added in later seasons to patch this.",
+      "exploit": "Kill the mobility, not the bot. Target drive pods and force it inverted while its weapon is down; historically it gets counted out rather than knocked out.",
+      "failure_trigger": "immobilization",
+      "notable": "Only bot to defeat three World Champions (Tombstone, Tantrum, SawBlaze). Beat Tombstone and Whiplash by out-of-the-arena KO.",
+      "sources": [
+        "https://battlebots.fandom.com/wiki/End_Game"
+      ],
+      "data_completeness": "high \u2014 record and incidents scraped via Bright Data; ko_win_rate still needs fight-table parse (scraper.py TODO)",
+      "career_wins": 25,
+      "career_losses": 12
+    },
+    {
+      "name": "Bite Force",
+      "team": "Team Bite Force (Paul Ventimiglia)",
+      "weight_class": "heavyweight",
+      "weapon_type": "grappler_flipper",
+      "weapon_detail": "Hydraulic jaws / grappler hybrid with a pneumatic flipping arm",
+      "titles": [
+        "World Championship I (2015)",
+        "World Championship IV (2019)"
+      ],
+      "career_wins": 26,
+      "career_losses": 1,
+      "ko_win_rate": null,
+      "self_failure_incidents": [],
+      "defect_summary": "No recurring failure pattern documented across two championship runs \u2014 one of the most reliable bots in the dataset. Tracks are a known structural target (opponents have tried to rip them off) but that has not yet produced a documented loss.",
+      "exploit": "No exploitable pattern found. If anything, target the tracks/undercarriage \u2014 the one structural vulnerability opponents have gone after \u2014 but treat this as unproven, not a plan.",
+      "failure_trigger": null,
+      "sources": [
+        "https://battlebots.fandom.com/wiki/Bite_Force"
+      ],
+      "data_completeness": "partial \u2014 record scraped via Bright Data; single career loss not yet located in text, no fight-by-fight breakdown parsed"
+    },
+    {
+      "name": "Witch Doctor",
+      "team": "Team Witch Doctor (Mike & Andrea Gellatly)",
+      "weight_class": "heavyweight",
+      "weapon_type": "vertical_spinner",
+      "weapon_detail": "Asymmetrical vertical spinning disk, twin hinged forks",
+      "titles": [],
+      "career_wins": 41,
+      "career_losses": 18,
+      "ko_win_rate": null,
+      "self_failure_incidents": [
+        {
+          "event": "World Championship VI final vs Tantrum",
+          "failure": "Lost by KO in the championship final despite a 2-1 Fight Night record"
+        },
+        {
+          "event": "Both meetings vs Tombstone",
+          "failure": "Documented trivia: both times Witch Doctor faced Tombstone, the winner ended up with a broken weapon \u2014 weapon reliability decides the fight either way"
+        },
+        {
+          "event": "General pattern",
+          "failure": "Runner-up in two separate World Championships (IV and VI) without ever winning the title \u2014 a repeated 'best of the rest' pattern"
+        }
+      ],
+      "defect_summary": "Extremely durable and tournament-consistent (only bot to qualify for all seven World Championships) but has a documented ceiling: two runner-up finishes without a title, and its highest-profile losses come in finals rather than early exits.",
+      "exploit": "Force the fight to a final. Witch Doctor's record shows it wins rounds reliably but has lost every championship match it has reached \u2014 pressure in the final round is where it has folded historically.",
+      "failure_trigger": "late_fight_hardware",
+      "sources": [
+        "https://battlebots.fandom.com/wiki/Witch_Doctor"
+      ],
+      "data_completeness": "high \u2014 41-18 competitive record and title history scraped via Bright Data; fight-by-fight KO/JD breakdown not yet parsed"
+    },
+    {
+      "name": "Minotaur",
+      "team": "Team RioBotz (Marco Meggiolaro, Brazil)",
+      "weight_class": "heavyweight",
+      "weapon_type": "horizontal_spinner",
+      "weapon_detail": "60-70lb drum spinner, self-rights using the drum's own gyroscopic force",
+      "titles": [],
+      "career_wins": null,
+      "career_losses": null,
+      "ko_win_rate": null,
+      "self_failure_incidents": [
+        {
+          "event": "World Championship III vs Tombstone",
+          "failure": "Became high-centered on floor damage after its own recoil sheared chassis bolts; weapon stopped and it was counted out"
+        },
+        {
+          "event": "World Championship IV vs Gigabyte",
+          "failure": "Weapon underperformed after support-pole damage; lost on judges' decision"
+        },
+        {
+          "event": "World Championship IV vs DeathRoll",
+          "failure": "Lost a drive belt mid-fight, weapon stopped, then became high-centered and was counted out"
+        },
+        {
+          "event": "World Championship VI vs SawBlaze",
+          "failure": "Battery ruptured and caught fire after a direct hit; lost by judges' decision"
+        }
+      ],
+      "defect_summary": "Self-righting is entirely dependent on its own spinning drum for gyroscopic force. Once the weapon fails or stops (belt slip, battery puncture, sheared bolts from its own recoil), Minotaur cannot right itself and becomes an easy count-out target \u2014 despite frequently being the more aggressive bot for most of the fight.",
+      "exploit": "Survive the weapon exchanges without an early loss, and specifically target the drum drivetrain (belts, battery mounts). Once the weapon stops, Minotaur has no backup way to self-right.",
+      "failure_trigger": "late_fight_hardware",
+      "sources": [
+        "https://battlebots.fandom.com/wiki/Minotaur"
+      ],
+      "data_completeness": "partial \u2014 rich incident history scraped via Bright Data; exact win/loss totals not yet parsed"
+    },
+    {
+      "name": "HyperShock",
+      "weapon_type": "vertical_spinner",
+      "career_wins": 27,
+      "career_losses": 20,
+      "self_failure_incidents": [
+        {
+          "event": "documented incident",
+          "failure": "Bite Force eventually got HyperShock up onto its plow, bringing down the clamping arms to try to hold it still, but the Floridian spinner wriggled free. Almost as soon as it escaped Bite Force's clutches, however, HyperShock began to smoke, its drive"
+        },
+        {
+          "event": "documented incident",
+          "failure": "\"_Come on Paul! Paul, flip me Paul!_\" \u2014 Will Bales' attempt to continue the fight Bite Force hangs back as HyperShock is counted out. In a desperate attempt to avoid a count-out, Will Bales called for Paul to flip his machine over, and though Paul in"
+        },
+        {
+          "event": "documented incident",
+          "failure": "The Caustic Creations entry was held against the housing of the screws as its drum was halted again. However, smoke then began to emit from HyperShock as its drive ground to a halt as a result of a mechanical breach of a battery linked to its drive s"
+        },
+        {
+          "event": "documented incident",
+          "failure": "Bouncing back and forth, it continuously rammed and inflicted further damage to Battle Royale With Cheese, even during the latter's subsequent count-out. HyperShock finished the match by wedging Battle Royale With Cheese between itself and the bumper"
+        },
+        {
+          "event": "documented incident",
+          "failure": "This time, the fork went underneath HyperShock's body and lifted all four of its wheels off the arena floor. HyperShock was counted out, giving Free Shipping the win by KO. **HyperShock vs."
+        }
+      ],
+      "defect_summary": "Automated scan flags a recurring immobilization/count-out pattern in this bot's fight history.",
+      "exploit": "Target mobility (wheels/drive) over raw damage \u2014 this bot's history shows losses by count-out.",
+      "failure_trigger": "immobilization",
+      "data_completeness": "auto-scraped \u2014 unverified, spot-check before relying on it",
+      "weapon_detail": null,
+      "titles": [],
+      "sources": [
+        "https://battlebots.fandom.com/wiki/HyperShock"
+      ]
+    },
+    {
+      "name": "DeathRoll",
+      "weapon_type": "vertical_spinner",
+      "career_wins": 9,
+      "career_losses": 7,
+      "self_failure_incidents": [
+        {
+          "event": "documented incident",
+          "failure": "The next attack tore much of DeathRoll's tail away and the weapon-on-weapon collision which followed ripped off more of its decorative armor. As DeathRoll looked to recover, it became clear the repeated attacks had affected its vertical spinner, whic"
+        },
+        {
+          "event": "documented incident",
+          "failure": "DeathRoll's primary weapon suddenly got back up to speed, but there was little life from the rest of the robot. Captain Shrederator's final hit saw DeathRoll become high-centered on its own shell, and it was counted out soon after by referee Michael "
+        },
+        {
+          "event": "documented incident",
+          "failure": "DeathRoll and Skorpios continued to fight alone until Bucktooth Burl returned to life, forcing its way between both opponents and striking the left flank of the Australian bot. Skorpios then charged at DeathRoll, lifting its decorative shell away bef"
+        },
+        {
+          "event": "documented incident",
+          "failure": "DeathRoll came back over with its weapon at full speed, waiting to see if End Game would self-right, but it did not. End Game was counted out, giving DeathRoll the win by KO. **DeathRoll vs."
+        },
+        {
+          "event": "vs. Foxtrot",
+          "failure": "As the match began, DeathRoll was fairly even with Foxtrot, causing little damage but not taking damage either. However, after another impact, DeathRoll stopped moving momentarily. Luckily, DeathRoll got going again before a countdown was needed and "
+        }
+      ],
+      "defect_summary": "Automated scan flags a recurring immobilization/count-out pattern in this bot's fight history.",
+      "exploit": "Target mobility (wheels/drive) over raw damage \u2014 this bot's history shows losses by count-out.",
+      "failure_trigger": "immobilization",
+      "data_completeness": "auto-scraped \u2014 unverified, spot-check before relying on it",
+      "weapon_detail": null,
+      "titles": [],
+      "sources": [
+        "https://battlebots.fandom.com/wiki/DeathRoll"
+      ]
+    },
+    {
+      "name": "Copperhead",
+      "weapon_type": "vertical_spinner",
+      "career_wins": 17,
+      "career_losses": 8,
+      "self_failure_incidents": [
+        {
+          "event": "documented incident",
+          "failure": "Skorpios delivered a blow that dented their top plate quite a bit and flipped them over. With no drive left, Copperhead was counted out, kicking off a rough start to the season. **Copperhead vs."
+        },
+        {
+          "event": "documented incident",
+          "failure": "The second hit proved to be a lethal one as it threw both robots backwards in opposite directions. Unfortunately for Copperhead, it had lost drive on one side and its drum had become dislodged, which were both tied to one of its side wedgelets being "
+        },
+        {
+          "event": "documented incident",
+          "failure": "Unfortunately for Copperhead, it had lost drive on one side and its drum had become dislodged, which were both tied to one of its side wedgelets being bent into the wheel and causing one bolt to come off. This impact had also disabled Chronos' spinni"
+        },
+        {
+          "event": "documented incident",
+          "failure": "Seeing his opponent trapped, Zach Goff chased WAR Stop around the arena once again, this time landing a solid hit that bent its wedge and rendering it too immobile. As WAR Hawk was counted out, Copperhead celebrated its victory with a well-earned gyr"
+        },
+        {
+          "event": "documented incident",
+          "failure": "Luckily, Son of Whyachi held back a bit, but this didn't favor Copperhead at all as they eventually took more damage before being thrown out of the arena on impact. With no way out, Copperhead was counted out, giving Son of Whyachi the win by KO and "
+        }
+      ],
+      "defect_summary": "Automated scan flags a recurring immobilization/count-out pattern in this bot's fight history.",
+      "exploit": "Target mobility (wheels/drive) over raw damage \u2014 this bot's history shows losses by count-out.",
+      "failure_trigger": "immobilization",
+      "data_completeness": "auto-scraped \u2014 unverified, spot-check before relying on it",
+      "weapon_detail": null,
+      "titles": [],
+      "sources": [
+        "https://battlebots.fandom.com/wiki/Copperhead"
+      ]
+    },
+    {
+      "name": "Yeti",
+      "weapon_type": "vertical_spinner",
+      "career_wins": 13,
+      "career_losses": 7,
+      "self_failure_incidents": [
+        {
+          "event": "documented incident",
+          "failure": "Yeti momentarily became caught in the killsaw slots, but escaped once Lucky pushed it free. With Lucky's weapon disabled, Yeti was able to attack without fear and continued to attack the front plow of the No.21 seed. Yeti raised its lifting forks and"
+        },
+        {
+          "event": "documented incident",
+          "failure": "Chomp's next attack was met by the onrushing drum of Yeti, sending Zoe Stephenson's robot into a barrel roll. Yeti looks on as Chomp is counted out. Chomp was then taken to the screws, but was almost snagged by the BattleBox hazard itself."
+        },
+        {
+          "event": "documented incident",
+          "failure": "Unfortunately, this knocked out Yeti as it could no longer drive or move due to an intermittent power failure regarding one of the wires plugged into the receiver. Yeti was counted out and Icewave won by knockout. After this decisive hit, Icewave acc"
+        },
+        {
+          "event": "vs. Bombshell",
+          "failure": "Bombshell** Yeti damages Bombshell's wheel. Smoke leaks from Bombshell after pressure form Yeti. Yeti next found itself up against former runner-up Bombshell."
+        },
+        {
+          "event": "documented incident",
+          "failure": "Yeti didn't let up and hit Petunia again, causing it to land near the screws and stop moving shortly thereafter. Petunia was counted out, giving Yeti the win by KO. **Yeti vs."
+        }
+      ],
+      "defect_summary": "Automated scan flags a recurring immobilization/count-out pattern in this bot's fight history.",
+      "exploit": "Target mobility (wheels/drive) over raw damage \u2014 this bot's history shows losses by count-out.",
+      "failure_trigger": "immobilization",
+      "data_completeness": "auto-scraped \u2014 unverified, spot-check before relying on it",
+      "weapon_detail": null,
+      "titles": [],
+      "sources": [
+        "https://battlebots.fandom.com/wiki/Yeti"
+      ]
+    },
+    {
+      "name": "Whiplash",
+      "weapon_type": "vertical_spinner",
+      "career_wins": 28,
+      "career_losses": 14,
+      "self_failure_incidents": [
+        {
+          "event": "vs. Mecha Rampage",
+          "failure": "Additionally, Mecha Rampage's weapon wasn't up to full speed and thus Whiplash was able to pick it up and flip it against the arena barrier under the pulverizer. Mecha Rampage was unable to get down and was counted out, pushing Whiplash to a 2-0 reco"
+        },
+        {
+          "event": "documented incident",
+          "failure": "After another hit, Whiplash was left motionless against the arena barrier and smoking. Whiplash was counted out, giving Tombstone the win by KO. **Whiplash vs."
+        },
+        {
+          "event": "documented incident",
+          "failure": "Finally, Warhead was tipped over directly in the center of the arena and struggled to self-right. Whiplash went in for another attack, but smoke began to pour out of its chassis, so Whiplash backed off. Warhead was now unable to self-right and was co"
+        },
+        {
+          "event": "documented incident",
+          "failure": "Whiplash went in for another attack, but smoke began to pour out of its chassis, so Whiplash backed off. Warhead was now unable to self-right and was counted out, giving Whiplash the win by KO. **Whiplash vs."
+        },
+        {
+          "event": "documented incident",
+          "failure": "Whiplash managed to get a few hits on Yeti's wheels, bending the hubcaps but not affecting Yeti's mobility at all. However, with fifteen seconds left, smoke began to pour out of Whiplash as its drive motors were burning up, leaving it pretty much imm"
+        }
+      ],
+      "defect_summary": "Automated scan flags a recurring immobilization/count-out pattern in this bot's fight history.",
+      "exploit": "Target mobility (wheels/drive) over raw damage \u2014 this bot's history shows losses by count-out.",
+      "failure_trigger": "immobilization",
+      "data_completeness": "auto-scraped \u2014 unverified, spot-check before relying on it",
+      "weapon_detail": null,
+      "titles": [],
+      "sources": [
+        "https://battlebots.fandom.com/wiki/Whiplash"
+      ]
+    }
+  ]
+}
